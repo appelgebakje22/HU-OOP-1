@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI timestamp="2020-02-12T22:18:06" verified="false" xmi.version="1.2" xmlns:UML="http://schema.omg.org/spec/UML/1.4">
+<XMI timestamp="2020-02-12T22:42:32" verified="false" xmi.version="1.2" xmlns:UML="http://schema.omg.org/spec/UML/1.4">
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
@@ -69,15 +69,54 @@
           <UML:Parameter type="uHRHvhHBSWH6B" kind="return" xmi.id="uW0gsAw4DcW4b"/>
          </UML:BehavioralFeature.parameter>
         </UML:Operation>
-        <UML:Operation isInline="false" name="toString" isVirtual="false" isOverride="true" isLeaf="false" visibility="public" isSpecification="false" isAbstract="false" isQuery="false" isRoot="false" xmi.id="uXuXbx3MzPbxT"/>
+        <UML:Operation isInline="false" name="toString" isVirtual="false" isOverride="true" isLeaf="false" visibility="public" isSpecification="false" isAbstract="false" isQuery="false" isRoot="false" xmi.id="uXuXbx3MzPbxT">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter type="upEkXwpjFHXCa" kind="return" xmi.id="u8V33bW8bWV1U"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
        </UML:Classifier.feature>
       </UML:Class>
+      <UML:Class name="Voetbalclub" isLeaf="false" visibility="public" isSpecification="false" isAbstract="false" isRoot="false" namespace="Logical_View" xmi.id="ufKfZtwKl04aC">
+       <UML:Classifier.feature>
+        <UML:Attribute name="naam" type="upEkXwpjFHXCa" visibility="private" isSpecification="false" xmi.id="uhh4hS2maKXg0"/>
+        <UML:Attribute name="aantalGewonnen" type="u2hCvB1Ir0Bw6" visibility="private" isSpecification="false" xmi.id="uPTZENGWH1lRg"/>
+        <UML:Attribute name="aantalGelijk" type="u2hCvB1Ir0Bw6" visibility="private" isSpecification="false" xmi.id="uScMPbxErqZty"/>
+        <UML:Attribute name="aantalVerloren" type="u2hCvB1Ir0Bw6" visibility="private" isSpecification="false" xmi.id="uKSt7eqi14srP"/>
+        <UML:Operation isInline="false" name="Voetbalclub" isVirtual="false" isOverride="false" isLeaf="false" visibility="public" isSpecification="false" isAbstract="false" isQuery="false" isRoot="false" xmi.id="u7BLA7pbTxbZL">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter name="naam" type="upEkXwpjFHXCa" visibility="private" isSpecification="false" value="" xmi.id="uVY9LsjHaxxOJ"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isInline="false" name="verwerkResultaat" isVirtual="false" isOverride="false" isLeaf="false" visibility="public" isSpecification="false" isAbstract="false" isQuery="false" isRoot="false" xmi.id="uRQSkzumXfShq">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter name="ch" type="uzpjKmLHtVIFb" visibility="private" isSpecification="false" value="" xmi.id="uxlpm294EotPU"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isInline="false" name="aantalGespeeld" isVirtual="false" isOverride="false" isLeaf="false" visibility="public" isSpecification="false" isAbstract="false" isQuery="false" isRoot="false" xmi.id="us0MZiyrgGHqj">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter type="u2hCvB1Ir0Bw6" kind="return" xmi.id="uf3ExbtnwDpfG"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isInline="false" name="aantalPunten" isVirtual="false" isOverride="false" isLeaf="false" visibility="public" isSpecification="false" isAbstract="false" isQuery="false" isRoot="false" xmi.id="uwaVUaSWyS8ap">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter type="u2hCvB1Ir0Bw6" kind="return" xmi.id="uc1pYrDCzNrFp"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isInline="false" name="toString" isVirtual="false" isOverride="true" isLeaf="false" visibility="public" isSpecification="false" isAbstract="false" isQuery="false" isRoot="false" xmi.id="utDFUyVxW8TyA">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter type="upEkXwpjFHXCa" kind="return" xmi.id="uBs2fs4YOHALU"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Class name="String" isLeaf="false" visibility="public" isSpecification="false" isAbstract="false" isRoot="false" namespace="Logical_View" xmi.id="uWYoceMcze8by"/>
      </UML:Namespace.ownedElement>
      <XMI.extension xmi.extender="umbrello">
       <diagrams resolution="96">
-       <diagram textcolor="#000000" type="1" linewidth="0" snapx="25" backgroundcolor="#ffffff" canvasheight="784" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" localid="-1" linecolor="#ff0000" snapcsgrid="0" documentation="" showatts="1" name="class diagram" showscope="1" zoom="100" xmi.id="uU2okB9cXThel" showpubliconly="0" showopsig="1" showpackage="1" canvaswidth="709" snapgrid="0" griddotcolor="#d3d3d3" usefillcolor="1" showgrid="0" showattribassocs="1" fillcolor="#ffff00" showops="1" showattsig="1" snapy="25" isopen="1">
+       <diagram textcolor="#000000" type="1" linewidth="0" snapx="25" backgroundcolor="#ffffff" canvasheight="822" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" localid="-1" linecolor="#ff0000" snapcsgrid="0" documentation="" showatts="1" name="class diagram" showscope="1" zoom="100" xmi.id="uU2okB9cXThel" showpubliconly="0" showopsig="1" showpackage="1" canvaswidth="2689" snapgrid="0" griddotcolor="#d3d3d3" usefillcolor="1" showgrid="0" showattribassocs="1" fillcolor="#ffff00" showops="1" showattsig="1" snapy="25" isopen="1">
         <widgets>
-         <classwidget textcolor="#000000" linewidth="0" isinstance="0" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" localid="uKO8EigjlOQCV" linecolor="#ff0000" showattributes="1" showopsigs="601" showscope="1" usesdiagramusefillcolor="0" x="-493" xmi.id="u0puFRRBFbPF9" showpubliconly="0" showpackage="1" y="-864" usesdiagramfillcolor="0" usefillcolor="1" showoperations="1" fillcolor="#ffff00" height="165" width="421" autoresize="1" showattsigs="601"/>
+         <classwidget textcolor="#000000" linewidth="0" isinstance="0" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" localid="uAgQDNbeq4Jxw" linecolor="#ff0000" showattributes="1" showopsigs="601" showscope="1" usesdiagramusefillcolor="0" x="-760" xmi.id="ufKfZtwKl04aC" showpubliconly="0" showpackage="1" y="-889" usesdiagramfillcolor="0" usefillcolor="1" showoperations="1" fillcolor="#ffff00" height="150" width="207" autoresize="1" showattsigs="601"/>
+         <classwidget textcolor="#000000" linewidth="0" isinstance="0" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" localid="uKO8EigjlOQCV" linecolor="#ff0000" showattributes="1" showopsigs="601" showscope="1" usesdiagramusefillcolor="0" x="-1210" xmi.id="u0puFRRBFbPF9" showpubliconly="0" showpackage="1" y="-888" usesdiagramfillcolor="0" usefillcolor="1" showoperations="1" fillcolor="#ffff00" height="165" width="421" autoresize="1" showattsigs="601"/>
         </widgets>
         <messages/>
         <associations/>
@@ -101,7 +140,7 @@
   </UML:Model>
  </XMI.content>
  <XMI.extensions xmi.extender="umbrello">
-  <docsettings documentation="" uniqueid="uXuXbx3MzPbxT" viewid="uU2okB9cXThel"/>
+  <docsettings documentation="" uniqueid="uBs2fs4YOHALU" viewid="uU2okB9cXThel"/>
   <listview>
    <listitem id="Views" open="1" type="800">
     <listitem id="Component_View" open="1" type="821"/>
@@ -128,6 +167,18 @@
       <listitem id="uKYjBUe7nUhzc" open="0" type="829"/>
       <listitem id="uwlNHKKPtEntS" open="0" type="829"/>
       <listitem id="uV8sBxkXfMK9C" open="0" type="829"/>
+     </listitem>
+     <listitem id="uWYoceMcze8by" open="1" type="813"/>
+     <listitem id="ufKfZtwKl04aC" open="1" type="813">
+      <listitem id="uScMPbxErqZty" open="0" type="814"/>
+      <listitem id="us0MZiyrgGHqj" open="0" type="815"/>
+      <listitem id="uPTZENGWH1lRg" open="0" type="814"/>
+      <listitem id="uwaVUaSWyS8ap" open="0" type="815"/>
+      <listitem id="uKSt7eqi14srP" open="0" type="814"/>
+      <listitem id="uhh4hS2maKXg0" open="0" type="814"/>
+      <listitem id="utDFUyVxW8TyA" open="0" type="815"/>
+      <listitem id="uRQSkzumXfShq" open="0" type="815"/>
+      <listitem id="u7BLA7pbTxbZL" open="0" type="815"/>
      </listitem>
      <listitem id="u0puFRRBFbPF9" open="1" type="813">
       <listitem id="uCt53meShZ1SC" open="0" type="814"/>

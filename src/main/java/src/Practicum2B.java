@@ -25,6 +25,8 @@ public class Practicum2B {
 		private int aantalGewonnen, aantalGelijk, aantalVerloren;
 
 		public Voetbalclub(String naam) {
+			if (naam == null || naam.equals(""))
+				naam = "FC";
 			this.naam = naam;
 		}
 
@@ -48,7 +50,6 @@ public class Practicum2B {
 					++this.aantalVerloren;
 					return;
 				default:
-					return;
 			}
 		}
 
@@ -63,7 +64,7 @@ public class Practicum2B {
 		@Override
 		public String toString() {
 			return String.format(
-				"%s   %s %s %s %s %s",
+				"%s %s %s %s %s %s",
 				this.naam,
 				this.aantalGespeeld(),
 				this.aantalGewonnen,

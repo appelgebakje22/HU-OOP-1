@@ -1,3 +1,5 @@
+package src;
+
 public class Practicum2B {
 
 	public static void main(String[] args) {
@@ -17,7 +19,7 @@ public class Practicum2B {
 		System.out.println(feij);
 	}
 
-	private static class Voetbalclub {
+	public static class Voetbalclub {
 
 		private String naam;
 		private int aantalGewonnen, aantalGelijk, aantalVerloren;

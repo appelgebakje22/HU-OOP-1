@@ -1,3 +1,5 @@
+package src;
+
 public class Practicum2A {
 
 	public static void main(String[] args)

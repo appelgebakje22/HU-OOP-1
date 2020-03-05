@@ -5,6 +5,7 @@ import src.Practicum2B.Voetbalclub;
 import static org.junit.Assert.assertEquals;
 
 public class Practicum3A {
+
     @Test
     public void leegResultaten() {
         Voetbalclub v1 = new Voetbalclub("");

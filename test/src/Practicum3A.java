@@ -1,3 +1,5 @@
+package src;
+
 import org.junit.Test;
 
 import src.Practicum2B.Voetbalclub;

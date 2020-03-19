@@ -1,11 +1,11 @@
+package src;
+
 import static src.Practicum4B.*;
-
 import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
 
-public class Practicum4B {
+public class TestPracticum4B {
 
 	private Klant huurder;
 	private Auto auto;
@@ -13,9 +13,9 @@ public class Practicum4B {
 
 	@Before
 	public void init() {
-		this.huurder = new Klant("DeKlant");
-		this.auto = new Auto("DeAuto", 100);
-		this.huur = new AutoHuur();
+		this.huurder = new Practicum4B.Klant("DeKlant");
+		this.auto = new Practicum4B.Auto("DeAuto", 100);
+		this.huur = new Practicum4B.AutoHuur();
 	}
 
 	@Test

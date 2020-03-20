@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+
+<FlowPane hgap="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="300.0" vgap="25.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.Practicum11.Controller">
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+    <children>
+        <FlowPane>
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleButtonInput" text="Selecteer invoerbestand" />
+                <Label fx:id="labelInput" text="&lt;&lt;filename&gt;&gt;" />
+            </children>
+        </FlowPane>
+        <FlowPane>
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleButtonOutput" text="Selecteer uitvoerbestand" />
+                <Label fx:id="labelOutput" text="&lt;&lt;filename&gt;&gt;" />
+            </children>
+        </FlowPane>
+        <FlowPane hgap="15.0" vgap="15.0">
+            <children>
+                <Label text="Wisselkoers: " />
+                <TextField fx:id="fieldExchange" text="91.8720" />
+            </children>
+        </FlowPane>
+      <FlowPane hgap="15.0">
+         <children>
+              <Button mnemonicParsing="false" onAction="#handleButtonProcess" text="Uitvoeren" />
+            <Label text="&lt;&lt;status&gt;&gt;" fx:id="labelStatus"/>
+         </children>
+      </FlowPane>
+    </children>
+</FlowPane>

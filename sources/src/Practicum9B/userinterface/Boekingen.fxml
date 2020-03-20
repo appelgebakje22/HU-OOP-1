@@ -35,8 +35,8 @@
       <Label text="Kamertype:" GridPane.rowIndex="5" />
       <FlowPane alignment="CENTER_RIGHT" hgap="15.0" vgap="15.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
          <children>
-            <Button fx:id="buttonReset" mnemonicParsing="false" onAction="#onActionReset" text="Reset" />
-            <Button fx:id="buttonBoek" mnemonicParsing="false" onAction="#onActionBoek" text="Boek" />
+            <Button mnemonicParsing="false" onAction="#onActionReset" text="Reset" />
+            <Button mnemonicParsing="false" onAction="#onActionBoek" text="Boek" />
          </children>
          <GridPane.margin>
             <Insets />

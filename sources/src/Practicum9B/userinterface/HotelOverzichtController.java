@@ -11,6 +11,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
+import src.Practicum9B.model.Boeking;
 import src.Practicum9B.model.Hotel;
 
 import java.io.IOException;
@@ -20,7 +21,7 @@ public class HotelOverzichtController {
 	@FXML
 	private Label hotelnaamLabel;
 	@FXML
-	private ListView boekingenListView;
+	private ListView<String> boekingenListView;
 	@FXML
 	private DatePicker overzichtDatePicker;
 
@@ -45,29 +46,29 @@ public class HotelOverzichtController {
 	public void nieuweBoeking(ActionEvent actionEvent) {
 		System.out.println("nieuweBoeking() is nog niet geïmplementeerd!");
 		try {
-			String fxmlPagina = "userinterface/Boekingen.fxml";
+			String fxmlPagina = "/" + this.getClass().getPackageName().replaceAll("\\.", "\\/") + "/Boekingen.fxml";
+			System.out.println(fxmlPagina);
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPagina));
 			Parent root = loader.load();
-            Stage stage = new Stage();
+			Stage stage = new Stage();
 			stage.setTitle("Boeking");
 			stage.setScene(new Scene(root));
 			stage.showAndWait();
+			this.initialize();
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		// Maak in je project een nieuwe FXML-pagina om boekingen te kunnen invoeren
-		// Open de nieuwe pagina in deze methode
-		// Zorg dat de gebruiker ondertussen geen gebruik kan maken van de HotelOverzicht-pagina
-		// Update na sluiten van de nieuwe pagina het boekingen-overzicht
 	}
 
 	public void toonBoekingen() {
-		System.out.println("toonBoekingen() is nog niet geïmplementeerd!");
 		ObservableList<String> boekingen = FXCollections.observableArrayList();
-
-		// Vraag de boekingen op bij het Hotel-object.
-		// Voeg voor elke boeking in nette tekst (string) toe aan de boekingen-lijst.
-
+		for (Boeking boeking : hotel.getBoekingen()) {
+			int kamer = boeking.getKamer().getKamerNummer();
+			LocalDate datumStart = boeking.getAankomstDatum();
+			LocalDate datumEind = boeking.getVertrekDatum();
+			String naam = boeking.getBoeker().getNaam();
+			boekingen.add(String.format("Kamer %s van %s tot %s, op naam van: %s", kamer, datumStart, datumEind, naam));
+		}
 		boekingenListView.setItems(boekingen);
 	}
 }

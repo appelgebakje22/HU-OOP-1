@@ -25,11 +25,6 @@ public class Practicum6B {
         System.out.println("p1 verkoopt g2 aan p2:" + (p1.verkoop(g2, p2) ? "" : " niet") + " gelukt");
         System.out.println("p1 verkoopt g1 aan p2:" + (p1.verkoop(g1, p2) ? "" : " niet") + " gelukt");
         System.out.println("\np1: " + p1 + "\n\np2: " + p2 + "\n");
-
-        Game game1 = p1.zoekGameOpNaam("Just Cause 3");
-        System.out.println("p1 heeft Just Cause 3 " + (game1 != null ? "wel!" : "niet!"));
-        Game game2 = p1.zoekGameOpNaam("Just Cause 4");
-        System.out.println("p1 heeft Just Cause 4 " + (game2 != null ? "wel!" : "niet!"));
     }
 
     public static class Game {
@@ -101,13 +96,6 @@ public class Practicum6B {
                 return false;
             this.budget += g.huidigeWaarde();
             return this.mijnGames.remove(g);
-        }
-
-        public Game zoekGameOpNaam(String naam)
-        {
-            if (naam == null)
-                return null;
-            return mijnGames.stream().filter(game -> game.naam.equals(naam)).findFirst().orElse(null);
         }
 
         @Override

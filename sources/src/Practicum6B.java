@@ -25,6 +25,12 @@ public class Practicum6B {
         System.out.println("p1 verkoopt g2 aan p2:" + (p1.verkoop(g2, p2) ? "" : " niet") + " gelukt");
         System.out.println("p1 verkoopt g1 aan p2:" + (p1.verkoop(g1, p2) ? "" : " niet") + " gelukt");
         System.out.println("\np1: " + p1 + "\n\np2: " + p2 + "\n");
+
+        ArrayList<Game> teKoop = new ArrayList<>();
+        teKoop.add(g1);
+        teKoop.add(new Game("Mario Kart 8", 2019, 35.00));
+        ArrayList<Game> nogNietInBezit = p1.bepaalGamesNietInBezit(teKoop);
+        System.out.println("p1 heeft de volgende games nog niet: " + nogNietInBezit.toString());
     }
 
     public static class Game {
@@ -96,6 +102,13 @@ public class Practicum6B {
                 return false;
             this.budget += g.huidigeWaarde();
             return this.mijnGames.remove(g);
+        }
+
+        public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> checkLijst)
+        {
+            ArrayList<Game> resultaat = new ArrayList<>(checkLijst);
+            resultaat.removeAll(mijnGames);
+            return resultaat;
         }
 
         @Override

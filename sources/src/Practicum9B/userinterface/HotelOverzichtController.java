@@ -44,7 +44,6 @@ public class HotelOverzichtController {
 	}
 
 	public void nieuweBoeking(ActionEvent actionEvent) {
-		System.out.println("nieuweBoeking() is nog niet geïmplementeerd!");
 		try {
 			String fxmlPagina = "/" + this.getClass().getPackageName().replaceAll("\\.", "\\/") + "/Boekingen.fxml";
 			System.out.println(fxmlPagina);
@@ -65,6 +64,8 @@ public class HotelOverzichtController {
 		for (Boeking boeking : hotel.getBoekingen()) {
 			int kamer = boeking.getKamer().getKamerNummer();
 			LocalDate datumStart = boeking.getAankomstDatum();
+			if (!this.overzichtDatePicker.getValue().equals(datumStart))
+				continue;
 			LocalDate datumEind = boeking.getVertrekDatum();
 			String naam = boeking.getBoeker().getNaam();
 			boekingen.add(String.format("Kamer %s van %s tot %s, op naam van: %s", kamer, datumStart, datumEind, naam));
